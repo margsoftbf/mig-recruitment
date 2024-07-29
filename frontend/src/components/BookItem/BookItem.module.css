@@ -1,0 +1,73 @@
+.box {
+	position: relative;
+	width: 330px;
+	height: 200px;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+	cursor: pointer;
+	padding: 0 1rem;
+}
+
+.box::after {
+	position: absolute;
+	content: '';
+	top: -1rem;
+	width: 90%;
+	text-align: center;
+	height: 1px;
+	background-color: #8b8b93;
+}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	text-align: left;
+}
+
+.title {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.subdesc {
+	color: #ababb6;
+	font-size: 0.9rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.image {
+	width: 130px;
+	height: 180px;
+}
+
+.author {
+	color: #fff;
+}
+
+.category {
+	color: #fff;
+}
+
+.price {
+	color: #5eea8d;
+	font-weight: 600;
+}
+
+.starFilled {
+	color: #fea73e;
+}
+
+.starEmpty {
+	color: #ccc;
+}
+
+.starIcon {
+	width: 1rem;
+	height: 1rem;
+}
