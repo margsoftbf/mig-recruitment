@@ -99,40 +99,7 @@ table {
 	flex-direction: column;
 	align-items: center;
 }
-.pagination {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 3rem;
-	gap: 10px;
-}
 
-.pagination button {
-	padding: 10px 20px;
-	background-color: #fff;
-	color: #000;
-	font-weight: 500;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
-}
-
-.pagination button:hover {
-	background-color: #8b8b93;
-	color: #1f2128;
-}
-
-.pagination .activePage {
-	background-color: #7364db;
-	color: #fff;
-}
-
-.pagination button[disabled] {
-	background-color: #ccc;
-	color: #666;
-	cursor: not-allowed;
-}
 
 @media (min-width: 768px) {
 	.book-list {

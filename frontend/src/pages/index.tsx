@@ -3,6 +3,7 @@ import axios from 'axios';
 import { BookItemProps } from '@/types/types';
 import BookItem from '@/components/BookItem/BookItem';
 import Link from 'next/link';
+import Pagination from '@/components/Pagination/Pagination';
 
 const Home = () => {
 	const [books, setBooks] = useState<BookItemProps[]>([]);
@@ -17,8 +18,6 @@ const Home = () => {
 			);
 			const fetchedBooks = response.data;
 			const totalCount = response.headers['x-total-count'];
-			
-		
 
 			setBooks(fetchedBooks);
 			setTotalPages(Math.ceil(Number(totalCount) / limit));
@@ -37,26 +36,7 @@ const Home = () => {
 		}
 	};
 
-	const renderPaginationButtons = () => {
-		const pageNumbers = [];
-		const maxPageButtons = 3;
-		const startPage = Math.max(1, currentPage - Math.floor(maxPageButtons / 2));
-		const endPage = Math.min(totalPages, startPage + maxPageButtons - 1);
 
-		for (let i = startPage; i <= endPage; i++) {
-			pageNumbers.push(i);
-		}
-
-		return pageNumbers.map((page) => (
-			<button
-				key={page}
-				onClick={() => handlePageChange(page)}
-				className={currentPage === page ? 'activePage' : ''}
-			>
-				{page}
-			</button>
-		));
-	};
 
 	return (
 		<div className='container'>
@@ -79,21 +59,11 @@ const Home = () => {
 					/>
 				))}
 			</ul>
-			<div className='pagination'>
-				<button
-					onClick={() => handlePageChange(currentPage - 1)}
-					disabled={currentPage === 1}
-				>
-					&laquo; Prev
-				</button>
-				{renderPaginationButtons()}
-				<button
-					onClick={() => handlePageChange(currentPage + 1)}
-					disabled={currentPage === totalPages}
-				>
-					Next &raquo;
-				</button>
-			</div>
+			<Pagination
+				currentPage={currentPage}
+				totalPages={totalPages}
+				onPageChange={handlePageChange}
+			/>
 		</div>
 	);
 };

@@ -12,8 +12,8 @@ const EditBookPage = () => {
 	}
 
 	return (
-		<div className='form-box'>
-			<h1 className='title'>Edit book</h1>
+		<div className={styles.formBox}>
+			<h1 className={styles.title}>Edit book</h1>
 			<BookEdit bookId={Number(id)} />
 		</div>
 	);
