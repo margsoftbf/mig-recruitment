@@ -36,7 +36,17 @@ This is a full-stack application for managing a collection of books. The applica
     DB_DATABASE=library
     ```
 
-3. **Run the application:**
+3. **Ensure Docker is running:**
+
+   Make sure Docker Desktop is installed and running on your machine. You can check if Docker is running by executing:
+
+    ```bash
+    docker info
+    ```
+
+    If Docker is not running, start Docker Desktop and wait until it is fully started.
+
+4. **Run the application:**
 
     Navigate to the root directory of the project and run the following command:
 
@@ -46,7 +56,7 @@ This is a full-stack application for managing a collection of books. The applica
 
     This command will build and start the containers for the PostgreSQL database, the backend, and the frontend.
 
-4. **Access the application:**
+5. **Access the application:**
 
     - Open your browser and go to `http://localhost:3000` to access the frontend.
     - The backend API will be available at `http://localhost:3001`.
@@ -86,6 +96,9 @@ This is a full-stack application for managing a collection of books. The applica
 
 ### Edit Book
 ![Edit Book](https://github.com/margsoftbf/mig-recruitment/blob/main/frontend/public/screenshoot/EditPage.jpg?raw=true)
+
+### Validation
+![Edit Book](https://github.com/margsoftbf/mig-recruitment/blob/main/frontend/public/screenshoot/Validation.jpg?raw=true)
 
 ## Notes
 
